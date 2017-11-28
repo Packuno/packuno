@@ -9,7 +9,7 @@ export const loggedIn = isLoggedInResult => ({
 export const loggedInAsync = () => (dispatch, getState) => {
   const options = {
     type: 'GET',
-    uri: 'http://localhost:3000/check/',
+    uri: '/check',
   };
   rp(options).then((result) => {
     dispatch(loggedIn(result.toString()));
@@ -24,7 +24,7 @@ export const currentUser = userID => ({
 export const currentUserAsync = () => (dispatch) => {
   const options = {
     type: 'GET',
-    uri: 'http://localhost:3000/user/',
+    uri: '/user',
   };
   rp(options).then((result) => {
     const id = JSON.parse(result);
@@ -38,7 +38,7 @@ export const currentUserAsync = () => (dispatch) => {
 export const loggedInAsync = () => (dispatch) => {
   const options = {
     type: 'GET',
-    uri: 'http://localhost:3000/check/',
+    uri: '/check',
   };
   rp(options)
     .then((result) => {
