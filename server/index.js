@@ -21,8 +21,8 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 //google OAuth using passport
 passport.use(new GoogleStrategy(
   {
-    clientID: '701084384568-cfgkqkmh3th8usnokt4aqle9am77ei0f.apps.googleusercontent.com',
-    clientSecret: 'NT4wXnxK6E8UBtEYopvP8M-h',
+    clientID: '',
+    clientSecret: '',
     callbackURL: 'http://localhost:3000/auth/google/callback',
     passReqToCallBack: true,
   },
